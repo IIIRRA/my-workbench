@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<script>try{var _t=localStorage.getItem("wb_theme_v1");if(_t==="dark"||_t==="light")document.documentElement.setAttribute("data-theme",_t);}catch(e){}</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>十四合一全栈培养方案总控门户</title>
+
+<!-- R14_UI_START -->
+<!-- R14_UI_END -->
+<!-- R15_UI_START -->
+<!-- R15_UI_END -->
+<!-- R16_FIX_CSS_START -->
+<!-- R16_FIX_CSS_END -->
+<!-- R17_POLISH_START -->
+<!-- R17_POLISH_END -->
+<!-- R18_COMPLETE_CSS_START -->
+<!-- R18_COMPLETE_CSS_END -->
+
+<!-- ITER10_POLISH_START -->
+<!-- ITER10_POLISH_END -->
+<!-- C4_ICPC_STD_START -->
+<!-- C4_ICPC_STD_END -->
+<!-- NO_OVERLAP_FAB_START --><!-- Managed centrally by shared/ui_polish.css --><!-- NO_OVERLAP_FAB_END -->
+<link rel="stylesheet" href="shared/portal.css">
+<link rel="stylesheet" href="shared/ui_polish.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+<header class="topbar">
+  <strong>全栈学习工作台</strong>
+  <div class="wb-portal-actions" style="display:flex;gap:6px;flex-wrap:nowrap;align-items:center;">
+    <button class="btn" data-wb-action="export-all">导出进度</button>
+    <button class="btn" data-wb-action="import-all">导入进度</button>
+    <button class="btn" id="lanSyncBtn" data-wb-action="lan-sync">🔄 同步</button>
+    <button class="btn" id="themeBtn" data-wb-action="toggle-theme">外观</button>
+  </div>
+</header>
+<section id="globalSearchSection" style="max-width:1120px;margin:18px auto 24px;padding:18px 22px;border-radius:18px;border:1.5px solid rgba(59,130,246,0.35);background:var(--card,rgba(255,255,255,0.85));backdrop-filter:blur(12px);">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+    <strong style="font-size:16px;">🔍 全局跨库搜索（14 工作台 + 教材分册 + 白话词典一键直达）</strong>
+    <span id="globalSearchCount" style="font-size:12px;color:var(--muted,#64748b);">正在加载全局索引…</span>
+  </div>
+  <input id="globalHubSearchInput" type="search" placeholder="输入任意关键词：如 贝叶斯、三次握手、SLR(1)、B+树、特征值、Effective Modern C++…" style="width:100%;padding:10px 14px;border-radius:12px;border:1.5px solid var(--border-strong,#cbd5e1);background:var(--bg,#fff);color:var(--text,#0f172a);font-size:14px;box-sizing:border-box;" />
+  <div id="globalHubSearchRes" style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;max-height:360px;overflow:auto;"></div>
+</section>
+<main class="main" id="portalMain">
+
+<!-- WB_V6_GLOBAL_SEARCH_START -->
+
+<script src="books_data/global_search_meta.js"></script>
+<!-- WB_V6_GLOBAL_SEARCH_END -->
+
+<!-- UX_ROADMAP_START -->
+
+<!-- UX_ROADMAP_END -->
+<div id="portalDynamicHost"></div>
+
+<div style="margin-top:18px;">
+<details class="wb-cat-collapse" style="margin:8px 0 12px 0;">
+  <summary class="wb-cat-summary">
+    <span class="wb-cat-cur">📊 <strong>全库总览统计</strong>（14 座工作台 · 41,794 题 · 1,907 篇精讲）</span>
+    <span class="wb-cat-toggle">展开 ▾</span>
+  </summary>
+  <div style="padding:10px 12px;"><!-- R5_LIVE_STATS_START -->
+<div class="r5-live-stats" id="r5LiveStats">
+  <div class="r5-stat-pill"><b>14 座</b><span>全栈学科交互工作台</span></div>
+  <div class="r5-stat-pill"><b>41,794 道</b><span>12 科 Markdown 分层习题</span></div>
+  <div class="r5-stat-pill"><b>1,907 篇</b><span>Markdown 零基础精讲</span></div>
+  <div class="r5-stat-pill"><b>ICPC 母版</b><span>全库统一舒适排版</span></div>
+</div>
+<!-- R5_LIVE_STATS_END --></div>
+</details>
+<details class="wb-cat-collapse" style="margin:8px 0 14px 0;">
+  <summary class="wb-cat-summary">
+    <span class="wb-cat-cur">🧭 <strong>跨学科学习路线与联动指南</strong></span>
+    <span class="wb-cat-toggle">展开路线 ▾</span>
+  </summary>
+  <div style="padding:10px 12px;"><section style="margin:0 0 28px 0;padding:22px;border-radius:22px;border:1px solid rgba(15,23,42,0.08);background:var(--card,rgba(255,255,255,0.86));box-shadow:0 10px 30px rgba(15,23,42,0.04);">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px;">
+    <h2 style="margin:0;font-size:18px;letter-spacing:-0.02em;">🧭 大一新生全栈学习路线与跨学科联动</h2>
+    <span style="font-size:12.5px;color:var(--muted,#64748b);">按阶段点击直达对应工作台，建议配合各科「🌐 3D 知识树」与「⭐ 收藏复习」使用</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+    <div style="padding:14px;border-radius:16px;background:var(--bg,rgba(248,250,252,0.8));border:1px solid rgba(59,130,246,0.18);">
+      <div style="font-size:12px;font-weight:700;color:#3b82f6;margin-bottom:6px;">阶段 1 · 数理地基</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">
+        <a class="cross-link-pill" href="./C4_%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">数学分析 ↗</a>
+        <a class="cross-link-pill" href="./%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">线性代数 ↗</a>
+        <a class="cross-link-pill" href="./%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">概率统计 ↗</a>
+        <a class="cross-link-pill" href="./%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">离散数学 ↗</a>
+      </div>
+    </div>
+    <div style="padding:14px;border-radius:16px;background:var(--bg,rgba(248,250,252,0.8));border:1px solid rgba(16,185,129,0.2);">
+      <div style="font-size:12px;font-weight:700;color:#10b981;margin-bottom:6px;">阶段 2 · 算法与底层底座</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">
+        <a class="cross-link-pill" href="./ICPC%E5%85%A8%E5%BA%93%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">ICPC 全库 ↗</a>
+        <a class="cross-link-pill" href="./%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">大学物理 ↗</a>
+        <a class="cross-link-pill" href="./%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">硬件体系 ↗</a>
+      </div>
+    </div>
+    <div style="padding:14px;border-radius:16px;background:var(--bg,rgba(248,250,252,0.8));border:1px solid rgba(139,92,246,0.2);">
+      <div style="font-size:12px;font-weight:700;color:#8b5cf6;margin-bottom:6px;">阶段 3 · 系统与软件工程</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">
+        <a class="cross-link-pill" href="./%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8EOS%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">数据结构与OS ↗</a>
+        <a class="cross-link-pill" href="./%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%B8%8E%E9%80%9A%E4%BF%A1%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">计网通信 ↗</a>
+        <a class="cross-link-pill" href="./%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">数据库软工 ↗</a>
+        <a class="cross-link-pill" href="./%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">编译原理 ↗</a>
+      </div>
+    </div>
+    <div style="padding:14px;border-radius:16px;background:var(--bg,rgba(248,250,252,0.8));border:1px solid rgba(245,158,11,0.22);">
+      <div style="font-size:12px;font-weight:700;color:#d97706;margin-bottom:6px;">阶段 4 · AI 与量化实战</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">
+        <a class="cross-link-pill" href="./%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">人工智能 ↗</a>
+        <a class="cross-link-pill" href="./C++20%E4%B8%8E%E9%87%8F%E5%8C%96%E5%B7%A5%E7%A8%8B%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">C++20 工程 ↗</a>
+        <a class="cross-link-pill" href="./%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">量化交易 ↗</a>
+      </div>
+    </div>
+  </div>
+</section></div>
+</details>
+</div>
+</main>
+
+<!-- stem_ai_exam extracted -->
+
+<script src="books_data/cross_search_data.js"></script>
+
+<script id="gh-repos-data" type="application/json">[{"name": "faranten/bupt-cs-gallery", "desc": "北邮 CS 前六学期课程资料与学长避坑指南 (437★)", "url": "https://github.com/faranten/bupt-cs-gallery"}, {"name": "Yokumii/BUPT-SCS-Courses-Shared", "desc": "北邮计算机学院 23 级计科课程存档与笔记汇总", "url": "https://github.com/Yokumii/BUPT-SCS-Courses-Shared"}, {"name": "MBR000/Learning-materials", "desc": "北邮计科大二上/下与大三上往年题与复习资料", "url": "https://github.com/MBR000/Learning-materials"}, {"name": "Holour/BUPT-Learning_Materials", "desc": "北邮《数据结构与算法分析》复习笔记与代码示例", "url": "https://github.com/Holour/BUPT-Learning_Materials"}, {"name": "datawhalechina/pumpkin-book", "desc": "《南瓜书》：周志华机器学习（西瓜书）全部公式逐行推导 (26.2k★)", "url": "https://github.com/datawhalechina/pumpkin-book"}, {"name": "lydrainbowcat/tedukuri", "desc": "《算法竞赛进阶指南》（蓝书）官方标程、数据与勘误 (2.6k★)", "url": "https://github.com/lydrainbowcat/tedukuri"}, {"name": "aoapc-book/aoapc-bac2nd", "desc": "《算法竞赛入门经典 第2版》（紫书）官方源码仓库 (2.8k★)", "url": "https://github.com/aoapc-book/aoapc-bac2nd"}, {"name": "luoyongjun999/code", "desc": "罗勇军《算法竞赛》配套章节源码仓库", "url": "https://github.com/luoyongjun999/code"}]</script>
+<!-- AI_FEED_IMPORTER_START -->
+
+<button id="aiFeedFab" type="button" title="Alt+I 打开 AI 喂题自动生成标准题解并导入工作台">✨ AI 喂题导入</button>
+<div id="aiFeedOverlay" role="dialog" aria-modal="true" aria-label="AI 喂题生成标准题解并自动导入工作台">
+  <div id="aiFeedModal">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+      <div>
+        <div style="font-size:17px;font-weight:700;">✨ AI 喂题 → 标准规范题解 → 自动导入工作台</div>
+        <div style="font-size:12px;opacity:0.72;margin-top:2px;">自动按当前工作台规范生成 8 段式零基础精解（含公式/代码/易错点），直接写入左侧目录并持久化保存</div>
+      </div>
+      <button id="aiFeedClose" class="aif-btn aif-btn-ghost" type="button">关闭</button>
+    </div>
+
+    <div class="aif-row">
+      <div class="aif-col">
+        <label class="aif-label">模型接口</label>
+        <select id="aifProvider" class="aif-select">
+          <option value="gemini">Google Gemini (原生 REST)</option>
+          <option value="openai">OpenAI 兼容 (/v1/chat/completions)</option>
+        </select>
+      </div>
+      <div class="aif-col">
+        <label class="aif-label">Base URL（OpenAI 兼容时必填）</label>
+        <input id="aifBaseUrl" class="aif-input" placeholder="https://api.openai.com/v1" />
+      </div>
+      <div class="aif-col">
+        <label class="aif-label">模型名称</label>
+        <input id="aifModel" class="aif-input" placeholder="gemini-2.5-flash / gpt-4o-mini" />
+      </div>
+    </div>
+
+    <div class="aif-row">
+      <div class="aif-col">
+        <label class="aif-label">API Key（自动同步本地浏览器配置）</label>
+        <input id="aifApiKey" class="aif-input" type="password" placeholder="粘贴你的 Gemini / OpenAI API Key" />
+      </div>
+      <div class="aif-col">
+        <label class="aif-label">导入分组 / 目标位置</label>
+        <select id="aifTargetGroup" class="aif-select"></select>
+      </div>
+      <div class="aif-col">
+        <label class="aif-label">题目截图（可选，支持图片识题）</label>
+        <input id="aifImageInput" class="aif-input" type="file" accept="image/*" />
+      </div>
+    </div>
+
+    <div style="margin-bottom:12px;">
+      <label class="aif-label">不会的题目 / 题号 / 题面 / 你的卡壳点</label>
+      <textarea id="aifPrompt" class="aif-textarea" placeholder="直接粘贴题面、截图或题号（例如：洛谷 P3372 线段树1 / 线性代数：证明实对称矩阵不同特征值的特征向量正交 / 计组：某 Cache 4路组相联计算题...），AI 将自动生成标准规范题解并直接导入当前工作台！"></textarea>
+    </div>
+
+    <div class="aif-row" style="justify-content:space-between;">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button id="aifRunBtn" class="aif-btn aif-btn-primary" type="button">🚀 生成标准题解并自动导入</button>
+        <button id="aifExportBtn" class="aif-btn aif-btn-ghost" type="button">导出已导入题解 (.json)</button>
+      </div>
+      <span style="font-size:12px;opacity:0.65;">快捷键：Alt + I</span>
+    </div>
+
+    <div id="aifStatus" class="aif-status"></div>
+    <div id="aifPreviewBox" class="aif-reader-box" style="display:none;"></div>
+
+    <div class="aif-saved-list">
+      <div style="font-size:13px;font-weight:700;margin-bottom:8px;">📚 本工作台已导入的 AI 题解（<span id="aifSavedCount">0</span>）</div>
+      <div id="aifSavedItems"></div>
+    </div>
+  </div>
+</div>
+
+<!-- AI_FEED_IMPORTER_END -->
+
+<!-- R14_JS_START -->
+<!-- R14_JS_END -->
+<!-- R15_JS_START -->
+<!-- R15_JS_END -->
+<!-- R17_JS_START -->
+<!-- R17_JS_END -->
+
+<!-- ITER10_JS_START -->
+<!-- ITER10_JS_END -->
+<!-- C4_ICPC_JS_START -->
+<!-- C4_ICPC_JS_END -->
+
+<script src="shared/portal.js"></script>
+<script src="shared/modules/ai_client.js" defer></script>
+<script src="shared/storage_idb.js" defer></script>
+<script src="shared/modules/stem_ai_exam.js" defer></script>
+<script src="shared/ui_polish.js" defer></script>
+
+</body>
+</html>

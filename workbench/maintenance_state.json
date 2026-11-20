@@ -1,0 +1,176 @@
+{
+  "version": 2,
+  "workbench_dir": ".",
+  "subjects": [
+    "icpc",
+    "c4",
+    "la",
+    "prob",
+    "dm",
+    "phys",
+    "cpp",
+    "quant",
+    "ai",
+    "dsos",
+    "arch",
+    "net",
+    "dbse",
+    "comp"
+  ],
+  "cursor": 4,
+  "next_mode": "B",
+  "progress": {
+    "icpc": {
+      "expert_docs_added": 7,
+      "l4_added": 5,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "已新增08深水区讲义(DSU on Tree/虚树/DDP)+5道L4大题(ICPC-EXP-01..05)",
+      "replaced_clones": 0,
+      "pdf_pages": "p264, p286 (李煜东/王晓东)"
+    },
+    "c4": {
+      "expert_docs_added": 4,
+      "l4_added": 0,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "B模式巡检通过：8个引用资源HTTP 200、KaTeX/词典/暗色/640px响应式正常、15个阶段与KB完整、0跨科串台、JS语法0报错",
+      "replaced_clones": 0,
+      "pdf_pages": "已注入核心页"
+    },
+    "la": {
+      "expert_docs_added": 7,
+      "l4_added": 9,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "已新增18深水区讲义(Krylov/CG/GMRES/随机SVD)+5道L4谱理论证明题(expert_la_p05..09)",
+      "replaced_clones": 250,
+      "pdf_pages": "p368-369 (Strang 4e)"
+    },
+    "prob": {
+      "expert_docs_added": 9,
+      "l4_added": 24,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "已新增18深度专题(测度论鞅论/KL-Wasserstein-MCMC/SPRT Lab)+20道L4证明题+p60-64识图+修复docs_c8/bank_c12分块映射",
+      "replaced_clones": 250,
+      "pdf_pages": "p171 (史悦); p60-64 (盛骤习题全解指南第3章)"
+    },
+    "dm": {
+      "expert_docs_added": 6,
+      "l4_added": 4,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "r14清零，L4=33",
+      "replaced_clones": 250,
+      "pdf_pages": "p53-54 (Rosen 6e)"
+    },
+    "phys": {
+      "expert_docs_added": 6,
+      "l4_added": 4,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "r14清零，L4=34",
+      "replaced_clones": 250,
+      "pdf_pages": "已注入核心页"
+    },
+    "cpp": {
+      "expert_docs_added": 6,
+      "l4_added": 4,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "r14清零，L4=27",
+      "replaced_clones": 250,
+      "pdf_pages": "p277-278 (刘瑞芳), p107 (尹宝林)"
+    },
+    "quant": {
+      "expert_docs_added": 6,
+      "l4_added": 4,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "r14清零，L4=34",
+      "replaced_clones": 250,
+      "pdf_pages": "云盘暂无PDF"
+    },
+    "ai": {
+      "expert_docs_added": 6,
+      "l4_added": 4,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "r14清零，L4=34",
+      "replaced_clones": 250,
+      "pdf_pages": "p117-118 (郭军), p196 (FCG)"
+    },
+    "dsos": {
+      "expert_docs_added": 6,
+      "l4_added": 4,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "r14清零，L4=37",
+      "replaced_clones": 250,
+      "pdf_pages": "p169 (徐雅静)"
+    },
+    "arch": {
+      "expert_docs_added": 6,
+      "l4_added": 12,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "r14清零，L4=15",
+      "replaced_clones": 250,
+      "pdf_pages": "p143 (唐朔飞), p168 (俎云霄)"
+    },
+    "net": {
+      "expert_docs_added": 6,
+      "l4_added": 10,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "r14清零，L4=16",
+      "replaced_clones": 250,
+      "pdf_pages": "p209, p229 (Kurose 8e)"
+    },
+    "dbse": {
+      "expert_docs_added": 6,
+      "l4_added": 4,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "r14清零，L4=26",
+      "replaced_clones": 250,
+      "pdf_pages": "p959-961 (Silberschatz 7e), p161 (肖丁)"
+    },
+    "comp": {
+      "expert_docs_added": 6,
+      "l4_added": 12,
+      "r14_left": 0,
+      "last_audit": "2026-11-18",
+      "notes": "r14清零，L4=15",
+      "replaced_clones": 250,
+      "pdf_pages": "已注入核心页"
+    }
+  },
+  "history": [
+    {
+      "time": "2026-11-18T14:05:00-05:00",
+      "subject": "icpc",
+      "mode": "A",
+      "summary": "新增08_🔥_树上启发式合并与虚树DDP专题.md(4664字)与5道L4大题(ICPC-EXP-01..05)，C++17语法/JS语法/HTTP 200全通过"
+    },
+    {
+      "time": "2026-11-18T16:47:00-05:00",
+      "subject": "c4",
+      "mode": "B",
+      "summary": "完成C4工作台全量巡检（资源0 404、books_data/C4___________b01.js映射正常、KaTeX/词典/暗色/响应式/跨科串台0异常、内联与外部JS语法0报错）"
+    },
+    {
+      "time": "2026-11-18T18:24:00-05:00",
+      "subject": "la",
+      "mode": "A",
+      "summary": "新增18_🔥_Krylov子空间迭代法与随机SVD工程实战.md(3910字)与5道L4证明题(expert_la_p05..09)，C++17语法/JS语法/HTTP 200全通过"
+    },
+    {
+      "time": "2026-11-18T20:15:00-05:00",
+      "subject": "prob",
+      "mode": "parallel_subtasks",
+      "summary": "prob新增3篇深度讲义/Lab(7908字)+20道L4证明大题+盛骤p60-64逐页识图，并修复docs_c8漏加载与bank_c12 404，JS/HTTP全通过"
+    }
+  ]
+}

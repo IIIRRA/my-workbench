@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>大学物理学习工作台</title>
+<link rel="stylesheet" href="vendor/katex/katex.min.css" media="print" onload="this.media='all'" />
+<script defer src="vendor/katex/katex.min.js"></script>
+<script defer src="vendor/katex/auto-render.min.js"></script>
+<link rel="stylesheet" href="shared/workbench.css">
+<link rel="stylesheet" href="shared/ui_polish.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+<div id="readProgress"></div>
+<div id="trdPrintArea"></div>
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">回到顶部</button>
+<div id="termPopover" role="tooltip" aria-hidden="true"></div>
+<div id="extModalBackdrop" class="ext-modal-backdrop" onclick="if(event.target===this)closeExtModal()">
+  <div class="ext-modal">
+    <div class="ext-modal-head">
+      <div id="extModalTitle" style="font-weight:600;font-size:15px;"></div>
+      <button class="btn" style="height:28px;padding:0 12px;" onclick="closeExtModal()">关闭</button>
+    </div>
+    <div class="ext-modal-body" id="extModalBody"></div>
+  </div>
+</div>
+<canvas id="particle-canvas" style="position:fixed;inset:0;pointer-events:none;z-index:20;"></canvas>
+
+<aside id="aiDrawer" class="ai-drawer" aria-label="AI 助教">
+  <div class="ai-head">
+    <div>
+      <div class="ai-title" style="font-weight:600;font-size:14.5px;">AI 学科助教</div>
+      <div id="aiCtxLabel" style="font-size:11.5px;color:var(--muted);">已关联当前页面上下文</div>
+    </div>
+    <div style="display:flex;gap:6px;">
+      <button class="btn" style="height:28px;padding:0 10px;font-size:12px;" onclick="document.getElementById('aiCfgPanel').classList.toggle('open')">设置 API</button>
+      <button class="btn" style="height:28px;padding:0 10px;font-size:12px;" onclick="clearAiChat()">清空</button>
+      <button class="btn" style="height:28px;padding:0 10px;font-size:12px;" onclick="toggleAiDrawer(false)">关闭</button>
+    </div>
+  </div>
+  <div id="aiCfgPanel" class="ai-cfg">
+    <div style="display:flex;gap:6px;">
+      <select id="aiProvider" class="calc-input" style="height:30px;" aria-label="选择 AI 服务商" onchange="saveAiConfig()">
+        <option value="" disabled>请选择 AI 服务商...</option>
+        <option value="gemini">服务商：Gemini 官方接口</option>
+        <option value="openai">服务商：OpenAI / DeepSeek / 本地 Ollama</option>
+      </select>
+      <input id="aiModel" class="calc-input" style="height:30px;" placeholder="模型名 (如 gemini-2.5-flash)" onchange="saveAiConfig()" />
+    </div>
+    <input id="aiBaseUrl" class="calc-input" style="height:30px;" placeholder="Base URL (OpenAI兼容填如 https://api.deepseek.com/v1)" onchange="saveAiConfig()" />
+    <input id="aiApiKey" class="calc-input" style="height:30px;" type="password" placeholder="API Key (仅保存在本地浏览器 localStorage)" onchange="saveAiConfig()" />
+    <label style="display:flex;align-items:center;gap:6px;color:var(--muted);font-size:11.5px;">
+      <input id="aiUseProxy" type="checkbox" onchange="saveAiConfig()"> 若遇跨域(CORS)拦截，通过本地/服务器 /ai_chat 代理转发
+    </label>
+  </div>
+  <div class="ai-msgs" id="aiMsgs"></div>
+  <div class="ai-quick-chips">
+    <button class="ai-chip" onclick="askAiQuick('这题的推导过程我没太看懂，能用最通俗的直觉再讲一遍吗？')">通俗讲推导</button>
+    <button class="ai-chip" onclick="askAiQuick('这道题的核心前提条件、隐含假设与常见易错坑点有哪些？')">前提条件与坑点</button>
+    <button class="ai-chip" onclick="askAiQuick('请帮我逐步检查当前题目的推导步骤，并指出最容易出错的环节。')">检查推导步骤</button>
+    <button class="ai-chip" onclick="askAiQuick('请给我出一组典型反例与极端边界条件，检验我的理解是否有漏洞。')">给一组反例与边界条件</button>
+  </div>
+  <div class="ai-input-bar">
+    <textarea id="aiInput" class="ai-textarea" placeholder="随时问算法、公式或代码问题 (Enter 发送)..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendAiMessage();}"></textarea>
+    <button id="aiSendBtn" class="btn btn-primary" style="height:36px;padding:0 14px;" onclick="sendAiMessage()">发送</button>
+  </div>
+</aside>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="btn" id="toggleSidebar" style="height:30px;padding:0 12px;">目录</button>
+    <div class="brand" id="homeBtn">大学物理学习工作台</div>
+  </div>
+  <div class="search-wrap">
+    <input id="searchInput" class="search-box" type="search" placeholder="搜索题号、词典、模板 (⌘K)" />
+  </div>
+  <div class="topbar-right">
+    <button class="btn" id="topHomeBtn" onclick="renderHome()" style="height:30px;padding:0 12px;">总览</button>
+    <button class="btn" id="treeTopBtn" onclick="renderAlgoTree()" style="height:30px;padding:0 12px;">🌳 知识树状图</button>
+    <button class="btn" onclick="renderIcpcTextbooks()" style="height:30px;padding:0 12px;">📚 教材与零基础</button>
+    <button class="btn" id="roadmapBtn" style="height:30px;padding:0 12px;">80天路线</button>
+    <button class="btn" id="dictTopBtn" onclick="openDictModal()" style="height:30px;padding:0 12px;">📖 术语词典</button>
+    <button class="btn" id="vizTopBtn" style="height:30px;padding:0 12px;">可视化</button>
+    <button class="btn btn-primary" onclick="toggleAiDrawer()" style="height:30px;padding:0 12px;">AI 助教</button>
+    <button class="btn" onclick="openCommandPalette()" style="height:30px;padding:0 12px;">工具箱 ⌘K</button>
+    <button class="btn" id="themeBtn" style="height:30px;padding:0 12px;">外观</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar collapsed" id="sidebar"></aside>
+  <main class="main" id="main"></main>
+  <aside class="viz-sidebar" id="vizSidebar"></aside>
+</div>
+
+<script>window.__WB_SUBJECT_NAME__ = "大学物理";
+window.__WB_CONFIG__ = {"slug": "phys", "activeTab": "ALL", "heroEyebrow": "大学物理学习工作台 · 1,995 道精选母题 + Markdown 精讲 + 白话术语词典", "heroTitle": "大学物理学习工作台", "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。", "docChunks": ["data/phys/docs_c0.js", "data/phys/docs_c1.js", "data/phys/docs_c2.js", "data/phys/docs_c3.js", "data/phys/docs_c4.js", "data/phys/docs_c5.js"], "bankChunks": ["data/phys/bank_c0.js", "data/phys/bank_c1.js", "data/phys/bank_c2.js", "data/phys/bank_c3.js", "data/phys/bank_c4.js", "data/phys/bank_c5.js", "data/phys/bank_c6.js", "data/phys/bank_c7.js", "data/phys/bank_c8.js", "data/phys/bank_c9.js", "data/phys/bank_c10.js"], "stat3Label": "Markdown 分层习题", "stat3Val": "1,995", "stat3Sub": "L1零基础 · L2进阶 · L3综合"};</script>
+<script src="data/phys/core.js"></script>
+<script src="shared/tree3d.js" defer></script>
+<script src="shared/modules/ai_client.js" defer></script>
+<script src="shared/workbench_engine.js" defer></script>
+<script src="shared/modules/roadmap.js" defer></script>
+<script src="shared/modules/viz_engine.js" defer></script>
+<script src="shared/modules/glossary_pedagogy.js" defer></script>
+<script src="shared/modules/algo_tree.js" defer></script>
+<script src="shared/modules/ai_assistant.js" defer></script>
+<script src="shared/modules/vp_stress.js" defer></script>
+
+<button id="aiFeedFab" type="button" title="Alt+I 打开 AI 喂题自动生成标准题解并导入工作台">✨ AI 喂题导入</button>
+<div id="aiFeedOverlay" role="dialog" aria-modal="true" aria-label="AI 喂题生成标准题解并自动导入工作台">
+  <div id="aiFeedModal">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+      <div>
+        <div style="font-size:17px;font-weight:700;">✨ AI 喂题 → 标准规范题解 → 自动导入工作台</div>
+        <div style="font-size:12px;opacity:0.72;margin-top:2px;">自动按当前工作台规范生成 8 段式零基础精解（含公式/代码/易错点），直接写入左侧目录并持久化保存</div>
+      </div>
+      <button id="aiFeedClose" class="aif-btn aif-btn-ghost" type="button">关闭</button>
+    </div>
+
+    <div class="aif-row">
+      <div class="aif-col">
+        <label class="aif-label">模型接口</label>
+        <select id="aifProvider" class="aif-select">
+          <option value="gemini">Google Gemini (原生 REST)</option>
+          <option value="openai">OpenAI 兼容 (/v1/chat/completions)</option>
+        </select>
+      </div>
+      <div class="aif-col">
+        <label class="aif-label">Base URL（OpenAI 兼容时必填）</label>
+        <input id="aifBaseUrl" class="aif-input" placeholder="https://api.openai.com/v1" />
+      </div>
+      <div class="aif-col">
+        <label class="aif-label">模型名称</label>
+        <input id="aifModel" class="aif-input" placeholder="gemini-2.5-flash / gpt-4o-mini" />
+      </div>
+    </div>
+
+    <div class="aif-row">
+      <div class="aif-col">
+        <label class="aif-label">API Key（自动同步本地浏览器配置）</label>
+        <input id="aifApiKey" class="aif-input" type="password" placeholder="粘贴你的 Gemini / OpenAI API Key" />
+      </div>
+      <div class="aif-col">
+        <label class="aif-label">导入分组 / 目标位置</label>
+        <select id="aifTargetGroup" class="aif-select"></select>
+      </div>
+      <div class="aif-col">
+        <label class="aif-label">题目截图（可选，支持图片识题）</label>
+        <input id="aifImageInput" class="aif-input" type="file" accept="image/*" />
+      </div>
+    </div>
+
+    <div style="margin-bottom:12px;">
+      <label class="aif-label">不会的题目 / 题号 / 题面 / 你的卡壳点</label>
+      <textarea id="aifPrompt" class="aif-textarea" placeholder="直接粘贴题面、截图或题号（例如：洛谷 P3372 线段树1 / 线性代数：证明实对称矩阵不同特征值的特征向量正交 / 计组：某 Cache 4路组相联计算题...），AI 将自动生成标准规范题解并直接导入当前工作台！"></textarea>
+    </div>
+
+    <div class="aif-row" style="justify-content:space-between;">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button id="aifRunBtn" class="aif-btn aif-btn-primary" type="button">🚀 生成标准题解并自动导入</button>
+        <button id="aifExportBtn" class="aif-btn aif-btn-ghost" type="button">导出已导入题解 (.json)</button>
+      </div>
+      <span style="font-size:12px;opacity:0.65;">快捷键：Alt + I</span>
+    </div>
+
+    <div id="aifStatus" class="aif-status"></div>
+    <div id="aifPreviewBox" class="aif-reader-box" style="display:none;"></div>
+
+    <div class="aif-saved-list">
+      <div style="font-size:13px;font-weight:700;margin-bottom:8px;">📚 本工作台已导入的 AI 题解（<span id="aifSavedCount">0</span>）</div>
+      <div id="aifSavedItems"></div>
+    </div>
+  </div>
+</div>
+
+<script src="shared/storage_idb.js" defer></script>
+  <script src="shared/modules/stem_ai_exam.js" defer></script>
+  <script src="shared/workbench_addons.js" defer></script>
+  <script src="shared/ui_polish.js" defer></script>
+<script src="books_data/catalog.js" defer></script>
+<script src="shared/mastery_suite.js" defer></script>
+</body>
+</html>

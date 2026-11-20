@@ -1,0 +1,536 @@
+[
+  {
+    "file": "C++20与量化工程工作台.html",
+    "slug": "cpp",
+    "title": "C++20 与量化工程工作台",
+    "brand": "C++20 与量化工程工作台",
+    "treeBtn": "🌳 知识树状图",
+    "subjectName": "C++20 与量化工程",
+    "config": {
+      "slug": "cpp",
+      "activeTab": "ALL",
+      "heroEyebrow": "C++20 与量化工程工作台 · 2,145 道精选母题 + Markdown 精讲 + 白话术语词典",
+      "heroTitle": "C++20 与量化工程工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/cpp/docs_c0.js",
+        "data/cpp/docs_c1.js",
+        "data/cpp/docs_c2.js",
+        "data/cpp/docs_c3.js",
+        "data/cpp/docs_c4.js",
+        "data/cpp/docs_c5.js"
+      ],
+      "bankChunks": [
+        "data/cpp/bank_c0.js",
+        "data/cpp/bank_c1.js",
+        "data/cpp/bank_c2.js",
+        "data/cpp/bank_c3.js",
+        "data/cpp/bank_c4.js",
+        "data/cpp/bank_c5.js",
+        "data/cpp/bank_c6.js",
+        "data/cpp/bank_c7.js",
+        "data/cpp/bank_c8.js",
+        "data/cpp/bank_c9.js",
+        "data/cpp/bank_c10.js"
+      ],
+      "stat3Label": "Markdown 分层习题",
+      "stat3Val": "2,150",
+      "stat3Sub": "L1零基础 · L2进阶 · L3综合"
+    }
+  },
+  {
+    "file": "ICPC全库学习工作台.html",
+    "slug": "icpc",
+    "title": "ICPC 学习工作台",
+    "brand": "ICPC 学习工作台",
+    "treeBtn": "🌳 算法树状图",
+    "subjectName": "ICPC 算法与程序设计",
+    "config": {
+      "slug": "icpc",
+      "activeTab": "WF专题200题",
+      "heroEyebrow": "全库整合 · 1,021 题分级全库（含 184 道 2400–3500+ WF 压轴）+ 算法树状图 + 14类算法可视化",
+      "heroTitle": "一站式 ICPC 算法知识库与刷题工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持 80 天智能动态刷题路线、做题右侧栏实时算法可视化、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/icpc/docs_c0.js",
+        "data/icpc/docs_c1.js",
+        "data/icpc/docs_c2.js",
+        "data/icpc/docs_c3.js",
+        "data/icpc/docs_c4.js",
+        "data/icpc/docs_c5.js",
+        "data/icpc/docs_c6.js",
+        "data/icpc/docs_c7.js",
+        "data/icpc/docs_c8.js",
+        "data/icpc/docs_c9.js",
+        "data/icpc/docs_c10.js",
+        "data/icpc/docs_c11.js",
+        "data/icpc/docs_c12.js",
+        "data/icpc/docs_c13.js",
+        "data/icpc/docs_c14.js",
+        "data/icpc/docs_c15.js"
+      ],
+      "bankChunks": [
+        "data/icpc/bank_c0.js",
+        "data/icpc/bank_c1.js",
+        "data/icpc/bank_c2.js",
+        "data/icpc/bank_c3.js",
+        "data/icpc/bank_c4.js"
+      ],
+      "groups": [
+        "WF专题200题",
+        "算法术语词典",
+        "模板与总纲",
+        "学习计划与讲义",
+        "洛谷104题",
+        "🔥 高阶深水区专题"
+      ],
+      "customTabs": [
+        [
+          "WF专题200题",
+          "WF 专题 (200题)"
+        ],
+        [
+          "算法术语词典",
+          "术语词典 (12卷/403词条)"
+        ],
+        [
+          "模板与总纲",
+          "赛场模板与总纲"
+        ],
+        [
+          "学习计划与讲义",
+          "学习计划与讲义"
+        ],
+        [
+          "洛谷104题",
+          "洛谷精解 (104题)"
+        ]
+      ],
+      "stat3Label": "14 类右侧算法可视化引擎",
+      "stat3Val": "1,021",
+      "stat3Sub": "1,021 精选全库（含 WF 2400+ 专项）"
+    }
+  },
+  {
+    "file": "人工智能工作台.html",
+    "slug": "ai",
+    "title": "人工智能学习工作台",
+    "brand": "人工智能学习工作台",
+    "treeBtn": "🌳 知识树状图",
+    "subjectName": "人工智能",
+    "config": {
+      "slug": "ai",
+      "activeTab": "ALL",
+      "heroEyebrow": "人工智能学习工作台 · 2,121 道精选母题 + Markdown 精讲 + 白话术语词典",
+      "heroTitle": "人工智能学习工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/ai/docs_c0.js",
+        "data/ai/docs_c1.js",
+        "data/ai/docs_c2.js",
+        "data/ai/docs_c3.js",
+        "data/ai/docs_c4.js",
+        "data/ai/docs_c5.js",
+        "data/ai/docs_c6.js",
+        "data/ai/docs_c7.js"
+      ],
+      "bankChunks": [
+        "data/ai/bank_c0.js",
+        "data/ai/bank_c1.js",
+        "data/ai/bank_c2.js",
+        "data/ai/bank_c3.js",
+        "data/ai/bank_c4.js",
+        "data/ai/bank_c5.js",
+        "data/ai/bank_c6.js",
+        "data/ai/bank_c7.js",
+        "data/ai/bank_c8.js"
+      ],
+      "stat3Label": "Markdown 分层习题",
+      "stat3Val": "2,126",
+      "stat3Sub": "L1零基础 · L2进阶 · L3综合"
+    }
+  },
+  {
+    "file": "大学物理工作台.html",
+    "slug": "phys",
+    "title": "大学物理学习工作台",
+    "brand": "大学物理学习工作台",
+    "treeBtn": "🌳 知识树状图",
+    "subjectName": "大学物理",
+    "config": {
+      "slug": "phys",
+      "activeTab": "ALL",
+      "heroEyebrow": "大学物理学习工作台 · 1,990 道精选母题 + Markdown 精讲 + 白话术语词典",
+      "heroTitle": "大学物理学习工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/phys/docs_c0.js",
+        "data/phys/docs_c1.js",
+        "data/phys/docs_c2.js",
+        "data/phys/docs_c3.js",
+        "data/phys/docs_c4.js",
+        "data/phys/docs_c5.js"
+      ],
+      "bankChunks": [
+        "data/phys/bank_c0.js",
+        "data/phys/bank_c1.js",
+        "data/phys/bank_c2.js",
+        "data/phys/bank_c3.js",
+        "data/phys/bank_c4.js",
+        "data/phys/bank_c5.js",
+        "data/phys/bank_c6.js",
+        "data/phys/bank_c7.js",
+        "data/phys/bank_c8.js",
+        "data/phys/bank_c9.js",
+        "data/phys/bank_c10.js"
+      ],
+      "stat3Label": "Markdown 分层习题",
+      "stat3Val": "1,995",
+      "stat3Sub": "L1零基础 · L2进阶 · L3综合"
+    }
+  },
+  {
+    "file": "数据库与软件工程工作台.html",
+    "slug": "dbse",
+    "title": "数据库与软件工程工作台",
+    "brand": "数据库与软件工程工作台",
+    "treeBtn": "🌳 知识树状图",
+    "subjectName": "数据库与软件工程",
+    "config": {
+      "slug": "dbse",
+      "activeTab": "ALL",
+      "heroEyebrow": "数据库与软件工程工作台 · 2,178 道精选母题 + Markdown 精讲 + 白话术语词典",
+      "heroTitle": "数据库与软件工程工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/dbse/docs_c0.js",
+        "data/dbse/docs_c1.js",
+        "data/dbse/docs_c2.js",
+        "data/dbse/docs_c3.js",
+        "data/dbse/docs_c4.js",
+        "data/dbse/docs_c5.js",
+        "data/dbse/docs_c6.js",
+        "data/dbse/docs_c7.js"
+      ],
+      "bankChunks": [
+        "data/dbse/bank_c0.js",
+        "data/dbse/bank_c1.js",
+        "data/dbse/bank_c2.js",
+        "data/dbse/bank_c3.js",
+        "data/dbse/bank_c4.js",
+        "data/dbse/bank_c5.js",
+        "data/dbse/bank_c6.js",
+        "data/dbse/bank_c7.js",
+        "data/dbse/bank_c8.js",
+        "data/dbse/bank_c9.js",
+        "data/dbse/bank_c10.js",
+        "data/dbse/bank_c11.js"
+      ],
+      "stat3Label": "Markdown 分层习题",
+      "stat3Val": "2,183",
+      "stat3Sub": "L1零基础 · L2进阶 · L3综合"
+    }
+  },
+  {
+    "file": "数据结构与OS工作台.html",
+    "slug": "dsos",
+    "title": "数据结构与操作系统工作台",
+    "brand": "数据结构与操作系统工作台",
+    "treeBtn": "🌳 知识树状图",
+    "subjectName": "数据结构与操作系统",
+    "config": {
+      "slug": "dsos",
+      "activeTab": "ALL",
+      "heroEyebrow": "数据结构与操作系统工作台 · 1,955 道精选母题 + Markdown 精讲 + 白话术语词典",
+      "heroTitle": "数据结构与操作系统工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/dsos/docs_c0.js",
+        "data/dsos/docs_c1.js",
+        "data/dsos/docs_c2.js",
+        "data/dsos/docs_c3.js",
+        "data/dsos/docs_c4.js",
+        "data/dsos/docs_c5.js",
+        "data/dsos/docs_c6.js",
+        "data/dsos/docs_c7.js"
+      ],
+      "bankChunks": [
+        "data/dsos/bank_c0.js",
+        "data/dsos/bank_c1.js",
+        "data/dsos/bank_c2.js",
+        "data/dsos/bank_c3.js",
+        "data/dsos/bank_c4.js",
+        "data/dsos/bank_c5.js",
+        "data/dsos/bank_c6.js",
+        "data/dsos/bank_c7.js",
+        "data/dsos/bank_c8.js",
+        "data/dsos/bank_c9.js"
+      ],
+      "stat3Label": "Markdown 分层习题",
+      "stat3Val": "1,960",
+      "stat3Sub": "L1零基础 · L2进阶 · L3综合"
+    }
+  },
+  {
+    "file": "概率统计工作台.html",
+    "slug": "prob",
+    "title": "概率论与数理统计工作台",
+    "brand": "概率论与数理统计工作台",
+    "treeBtn": "🌳 知识树状图",
+    "subjectName": "概率论与数理统计",
+    "config": {
+      "slug": "prob",
+      "activeTab": "ALL",
+      "heroEyebrow": "概率论与数理统计工作台 · 1,505 道精选母题 + Markdown 精讲 + 白话术语词典",
+      "heroTitle": "概率论与数理统计工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/prob/docs_c0.js",
+        "data/prob/docs_c1.js",
+        "data/prob/docs_c2.js",
+        "data/prob/docs_c3.js",
+        "data/prob/docs_c4.js",
+        "data/prob/docs_c5.js",
+        "data/prob/docs_c6.js",
+        "data/prob/docs_c7.js",
+        "data/prob/docs_c8.js"
+      ],
+      "bankChunks": [
+        "data/prob/bank_c0.js",
+        "data/prob/bank_c1.js",
+        "data/prob/bank_c2.js",
+        "data/prob/bank_c3.js",
+        "data/prob/bank_c4.js",
+        "data/prob/bank_c5.js"
+      ],
+      "stat3Label": "Markdown 分层习题",
+      "stat3Val": "1,510",
+      "stat3Sub": "L1零基础 · L2进阶 · L3综合"
+    }
+  },
+  {
+    "file": "离散数学工作台.html",
+    "slug": "dm",
+    "title": "离散数学学习工作台",
+    "brand": "离散数学学习工作台",
+    "treeBtn": "🌳 知识树状图",
+    "subjectName": "离散数学",
+    "config": {
+      "slug": "dm",
+      "activeTab": "ALL",
+      "heroEyebrow": "离散数学学习工作台 · 1,611 道精选母题 + Markdown 精讲 + 白话术语词典",
+      "heroTitle": "离散数学学习工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/dm/docs_c0.js",
+        "data/dm/docs_c1.js",
+        "data/dm/docs_c2.js",
+        "data/dm/docs_c3.js",
+        "data/dm/docs_c4.js",
+        "data/dm/docs_c5.js"
+      ],
+      "bankChunks": [
+        "data/dm/bank_c0.js",
+        "data/dm/bank_c1.js",
+        "data/dm/bank_c2.js",
+        "data/dm/bank_c3.js",
+        "data/dm/bank_c4.js",
+        "data/dm/bank_c5.js"
+      ],
+      "stat3Label": "Markdown 分层习题",
+      "stat3Val": "1,616",
+      "stat3Sub": "L1零基础 · L2进阶 · L3综合"
+    }
+  },
+  {
+    "file": "线性代数工作台.html",
+    "slug": "la",
+    "title": "线性代数学习工作台",
+    "brand": "线性代数学习工作台",
+    "treeBtn": "🌳 知识树状图",
+    "subjectName": "线性代数",
+    "config": {
+      "slug": "la",
+      "activeTab": "ALL",
+      "heroEyebrow": "线性代数学习工作台 · 1,398 道精选母题 + Markdown 精讲 + 白话术语词典",
+      "heroTitle": "线性代数学习工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/la/docs_c0.js",
+        "data/la/docs_c1.js",
+        "data/la/docs_c2.js",
+        "data/la/docs_c3.js",
+        "data/la/docs_c4.js",
+        "data/la/docs_c5.js",
+        "data/la/docs_c6.js"
+      ],
+      "bankChunks": [
+        "data/la/bank_c0.js",
+        "data/la/bank_c1.js",
+        "data/la/bank_c2.js",
+        "data/la/bank_c3.js",
+        "data/la/bank_c4.js",
+        "data/la/bank_c5.js"
+      ],
+      "stat3Label": "Markdown 分层习题",
+      "stat3Val": "1,403",
+      "stat3Sub": "L1零基础 · L2进阶 · L3综合"
+    }
+  },
+  {
+    "file": "编译原理与形式语言工作台.html",
+    "slug": "comp",
+    "title": "编译原理与形式语言工作台",
+    "brand": "编译原理与形式语言工作台",
+    "treeBtn": "🌳 知识树状图",
+    "subjectName": "编译原理与形式语言",
+    "config": {
+      "slug": "comp",
+      "activeTab": "ALL",
+      "heroEyebrow": "编译原理与形式语言工作台 · 2,376 道精选母题 + Markdown 精讲 + 白话术语词典",
+      "heroTitle": "编译原理与形式语言工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/comp/docs_c0.js",
+        "data/comp/docs_c1.js",
+        "data/comp/docs_c2.js",
+        "data/comp/docs_c3.js",
+        "data/comp/docs_c4.js",
+        "data/comp/docs_c5.js"
+      ],
+      "bankChunks": [
+        "data/comp/bank_c0.js",
+        "data/comp/bank_c1.js",
+        "data/comp/bank_c2.js",
+        "data/comp/bank_c3.js",
+        "data/comp/bank_c4.js",
+        "data/comp/bank_c5.js",
+        "data/comp/bank_c6.js",
+        "data/comp/bank_c7.js",
+        "data/comp/bank_c8.js",
+        "data/comp/bank_c9.js",
+        "data/comp/bank_c10.js",
+        "data/comp/bank_c11.js",
+        "data/comp/bank_c12.js"
+      ],
+      "stat3Label": "Markdown 分层习题",
+      "stat3Val": "2,381",
+      "stat3Sub": "L1零基础 · L2进阶 · L3综合"
+    }
+  },
+  {
+    "file": "计算机硬件与体系结构工作台.html",
+    "slug": "arch",
+    "title": "计算机硬件与体系结构工作台",
+    "brand": "计算机硬件与体系结构工作台",
+    "treeBtn": "🌳 知识树状图",
+    "subjectName": "计算机硬件与体系结构",
+    "config": {
+      "slug": "arch",
+      "activeTab": "ALL",
+      "heroEyebrow": "计算机硬件与体系结构工作台 · 2,176 道精选母题 + Markdown 精讲 + 白话术语词典",
+      "heroTitle": "计算机硬件与体系结构工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/arch/docs_c0.js",
+        "data/arch/docs_c1.js",
+        "data/arch/docs_c2.js",
+        "data/arch/docs_c3.js",
+        "data/arch/docs_c4.js"
+      ],
+      "bankChunks": [
+        "data/arch/bank_c0.js",
+        "data/arch/bank_c1.js",
+        "data/arch/bank_c2.js",
+        "data/arch/bank_c3.js",
+        "data/arch/bank_c4.js",
+        "data/arch/bank_c5.js",
+        "data/arch/bank_c6.js",
+        "data/arch/bank_c7.js",
+        "data/arch/bank_c8.js",
+        "data/arch/bank_c9.js",
+        "data/arch/bank_c10.js",
+        "data/arch/bank_c11.js"
+      ],
+      "stat3Label": "Markdown 分层习题",
+      "stat3Val": "2,181",
+      "stat3Sub": "L1零基础 · L2进阶 · L3综合"
+    }
+  },
+  {
+    "file": "计算机网络与通信工作台.html",
+    "slug": "net",
+    "title": "计算机网络与通信工作台",
+    "brand": "计算机网络与通信工作台",
+    "treeBtn": "🌳 知识树状图",
+    "subjectName": "计算机网络与通信",
+    "config": {
+      "slug": "net",
+      "activeTab": "ALL",
+      "heroEyebrow": "计算机网络与通信工作台 · 2,061 道精选母题 + Markdown 精讲 + 白话术语词典",
+      "heroTitle": "计算机网络与通信工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/net/docs_c0.js",
+        "data/net/docs_c1.js",
+        "data/net/docs_c2.js",
+        "data/net/docs_c3.js",
+        "data/net/docs_c4.js",
+        "data/net/docs_c5.js"
+      ],
+      "bankChunks": [
+        "data/net/bank_c0.js",
+        "data/net/bank_c1.js",
+        "data/net/bank_c2.js",
+        "data/net/bank_c3.js",
+        "data/net/bank_c4.js",
+        "data/net/bank_c5.js",
+        "data/net/bank_c6.js",
+        "data/net/bank_c7.js",
+        "data/net/bank_c8.js",
+        "data/net/bank_c9.js",
+        "data/net/bank_c10.js"
+      ],
+      "stat3Label": "Markdown 分层习题",
+      "stat3Val": "2,066",
+      "stat3Sub": "L1零基础 · L2进阶 · L3综合"
+    }
+  },
+  {
+    "file": "量化交易工作台.html",
+    "slug": "quant",
+    "title": "量化交易学习工作台",
+    "brand": "量化交易学习工作台",
+    "treeBtn": "🌳 知识树状图",
+    "subjectName": "量化交易",
+    "config": {
+      "slug": "quant",
+      "activeTab": "ALL",
+      "heroEyebrow": "量化交易学习工作台 · 1,918 道精选母题 + Markdown 精讲 + 白话术语词典",
+      "heroTitle": "量化交易学习工作台",
+      "heroDesc": "整合全库 ${DOCS.length} 篇核心文档，支持动态刷题路线、全正文 Markdown 排版、全文秒级检索与个人笔记本地留存。",
+      "docChunks": [
+        "data/quant/docs_c0.js",
+        "data/quant/docs_c1.js",
+        "data/quant/docs_c2.js",
+        "data/quant/docs_c3.js",
+        "data/quant/docs_c4.js",
+        "data/quant/docs_c5.js",
+        "data/quant/docs_c6.js"
+      ],
+      "bankChunks": [
+        "data/quant/bank_c0.js",
+        "data/quant/bank_c1.js",
+        "data/quant/bank_c2.js",
+        "data/quant/bank_c3.js",
+        "data/quant/bank_c4.js",
+        "data/quant/bank_c5.js",
+        "data/quant/bank_c6.js",
+        "data/quant/bank_c7.js"
+      ],
+      "stat3Label": "Markdown 分层习题",
+      "stat3Val": "1,923",
+      "stat3Sub": "L1零基础 · L2进阶 · L3综合"
+    }
+  }
+]
